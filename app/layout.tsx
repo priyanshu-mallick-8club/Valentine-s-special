@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import MusicPlayer from "./components/MusicPlayer";
 
 export const metadata: Metadata = {
   title: "Will You Be My Valentine?",
@@ -17,7 +18,10 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="apple-touch-icon" ></link>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <MusicPlayer />
+      </body>
     </html>
   );
 }
